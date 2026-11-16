@@ -126,65 +126,65 @@
 | `width: 100%; display: block;`| `w-full block`      | `card-img-top` | Imagen superior de la tarjeta
 
 ## 12. Tablas
-| CSS                                                 | Tailwind                          | Bootstrap                      | Descripción                                          |
-| --------------------------------------------------- | --------------------------------- | ------------------------------ | ---------------------------------------------------- |
-| `width: 100%; border-collapse: collapse;`           | `w-full border-collapse text-left`| `table`                        | Estructura base de tabla.                            |
-| `background: black; color: white;`                  | `bg-black text-white`             | `table-dark`                   | Encabezado o tabla oscura (negro con texto blanco).  |
-| `border: 1px solid black;` *(en celdas)*            | `border border-black` *(en celdas)*| `table-bordered border-black`  | Bordes en todas las celdas de la tabla.              |
-| `tr:nth-child(even) { background: rgba(0,0,0,.05); }`| `even:bg-black/5` *(en `<tr>`)*   | `table-striped`                | Filas alternas (efecto cebra).                       |
-| `tr:hover { background: rgba(0,0,0,.1); }`          | `hover:bg-black/10` *(en `<tr>`)* | `table-hover`                  | Resaltar fila al pasar el ratón.                     |
-| `overflow-x: auto; width: 100%;` *(en div padre)*   | `overflow-x-auto w-full` *(en div)*| `table-responsive` *(en div)*  | Scroll horizontal para tablas en móvil.              |
+| CSS             | Tailwind        | Bootstrap         | Descripción          
+| --------------- | --------------- | ----------------- | -----------------------
+| `width: 100%; border-collapse: collapse;` | `w-full border-collapse text-left`| `table`| Estructura base de tabla
+| `background: black; color: white;`      | `bg-black text-white` | `table-dark`| Encabezado o tabla oscura 
+| `border: 1px solid black;` *(en celdas)*  | `border border-black` *(en celdas)*| `table-bordered border-black`  | Bordes en todas las celdas de la tabla
+| `tr:nth-child(even) { background: rgba(0,0,0,.05); }`| `even:bg-black/5` *(en `<tr>`)*   | `table-striped` | Filas alternas (efecto cebra)
+| `tr:hover { background: rgba(0,0,0,.1); }`| `hover:bg-black/10` *(en `<tr>`)* | `table-hover` | Resaltar fila al pasar el ratón
+| `overflow-x: auto; width: 100%;` *(en div padre)* | `overflow-x-auto w-full` *(en div)*| `table-responsive` *(en div)*  | Scroll horizontal para tablas en móvil
 
 
 ## 13. Display y Posicionamiento
-| CSS                                                       | Tailwind                                              | Bootstrap                            | Descripción                                            |
-| --------------------------------------------------------- | ----------------------------------------------------- | ------------------------------------ | ------------------------------------------------------ |
-| `display: block;`                                         | `block`                                               | `d-block`                            | Mostrar como bloque.                                   |
-| `display: none;`                                          | `hidden`                                              | `d-none`                             | Ocultar elemento completamente.                        |
-| `visibility: hidden;`                                     | `invisible`                                           | `invisible`                          | Ocultar visualmente manteniendo su espacio.            |
-| `position: relative;`                                     | `relative`                                            | `position-relative`                  | Posicionamiento relativo (padre).                      |
-| `position: absolute;`                                     | `absolute`                                            | `position-absolute`                  | Posicionamiento absoluto (hijo).                       |
-| `position: fixed;`                                        | `fixed`                                               | `position-fixed`                     | Fijo respecto a la ventana del navegador.              |
-| `position: sticky; top: 0;`                               | `sticky top-0`                                        | `sticky-top`                         | Pegado al borde superior al hacer scroll.              |
-| `top: 50%; left: 50%; transform: translate(-50%, -50%);`  | `top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2`  | `top-50 start-50 translate-middle`   | Centrar un elemento absoluto en medio de su padre.     |
-| `z-index: 10;`                                            | `z-10`                                                | `z-1`                                | Orden de apilamiento (profundidad).                    |
-| `overflow: hidden;`                                       | `overflow-hidden`                                     | `overflow-hidden`                    | Ocultar contenido que desborde.                        |
+| CSS               | Tailwind                  | Bootstrap         | Descripción                 
+| ----------------- | ------------------------- | ----------------- | ---------------------------------
+| `display: block;`           | `block`         | `d-block`         | Mostrar como bloque
+| `display: none;`            | `hidden`        | `d-none`          | Ocultar elemento completamente
+| `visibility: hidden;`       | `invisible`     | `invisible`       | Ocultar visualmente manteniendo su espacio
+| `position: relative;`       | `relative`      | `position-relative`| Posicionamiento relativo (padre)
+| `position: absolute;`       | `absolute`      | `position-absolute`| Posicionamiento absoluto (hijo)
+| `position: fixed;`          | `fixed`         | `position-fixed`  | Fijo respecto a la ventana del navegador
+| `position: sticky; top: 0;` | `sticky top-0`  | `sticky-top`      | Pegado al borde superior al hacer scroll
+| `top: 50%; left: 50%; transform: translate(-50%, -50%);`| `top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2`| `top-50 start-50 translate-middle` | Centrar un elemento absoluto en medio de su padre
+| `z-index: 10;`              | `z-10`          | `z-1`             | Orden de apilamiento (profundidad)
+| `overflow: hidden;`         | `overflow-hidden`| `overflow-hidden`| Ocultar contenido que desborde
 
 ## 14. Imágenes
-| CSS                                                      | Tailwind                                   | Bootstrap          | Descripción                                    |
-| -------------------------------------------------------- | ------------------------------------------ | ------------------ | ---------------------------------------------- |
-| `max-width: 100%; height: auto;`                         | `max-w-full h-auto`                        | `img-fluid`        | Imagen adaptable (responsive).                 |
-| `border-radius: 50%;`                                    | `rounded-full`                             | `rounded-circle`   | Imagen circular (avatar).                      |
-| `padding: 4px; border: 1px solid black; background: white;` | `p-1 border border-black rounded bg-white` | `img-thumbnail`    | Imagen con marco estilo miniatura.             |
-| `object-fit: cover;`                                     | `object-cover`                             | `object-fit-cover` | Ajustar imagen recortando sin deformar.        |
-| `filter: grayscale(100%);`                               | `grayscale`                                | *No existe clase*  | Filtro blanco y negro (escala de grises).      |
+| CSS                | Tailwind               | Bootstrap          | Descripción    
+| ------------------ | ---------------------- | ------------------ | ---------------------------------
+| `max-width: 100%; height: auto;`  | `max-w-full h-auto`  | `img-fluid`        | Imagen adaptable (responsive)
+| `border-radius: 50%;`             | `rounded-full`       | `rounded-circle`   | Imagen circular (avatar)
+| `padding: 4px; border: 1px solid black; background: white;` | `p-1 border border-black rounded bg-white` | `img-thumbnail`| Imagen con marco estilo miniatura
+| `object-fit: cover;`              | `object-cover`       | `object-fit-cover` | Ajustar imagen recortando sin deformar
+| `filter: grayscale(100%);`        | `grayscale`          | *No existe clase*  | Filtro blanco y negro (escala de grises)
 
 ## 15. Formularios e Inputs
-| CSS                                                                                       | Tailwind                                                               | Bootstrap                  | Descripción                                |
-| ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- | -------------------------- | ------------------------------------------ |
-| `display: block; width: 100%; padding: 8px 12px; border: 1px solid black; background: white; color: black;` | `block w-full px-3 py-2 border border-black bg-white text-black rounded-md` | `form-control border-black`| Campo de entrada de texto (`<input>`).     |
-| `display: block; width: 100%; padding: 8px 12px; border: 1px solid black; background: white; color: black;` | `block w-full px-3 py-2 border border-black bg-white text-black rounded-md` | `form-select border-black` | Selector desplegable (`<select>`).         |
-| `display: block; margin-bottom: 8px; font-weight: 500;`                                   | `block mb-2 font-medium`                                               | `form-label`               | Etiqueta de campo (`<label>`).             |
-| `accent-color: black; width: 16px; height: 16px;`                                         | `accent-black w-4 h-4 rounded`                                         | `form-check-input`         | Casilla de verificación (`checkbox`).      |
-| `display: flex; align-items: stretch; width: 100%;`                                       | `flex items-stretch w-full`                                            | `input-group`              | Agrupar input con botón o prefijo.         |
+| CSS                       | Tailwind                   | Bootstrap                  | Descripción 
+| ------------------------- | -------------------------- | -------------------------- | --------------------------
+| `display: block; width: 100%; padding: 8px 12px; border: 1px solid black; background: white; color: black;` | `block w-full px-3 py-2 border border-black bg-white text-black rounded-md` | `form-control border-black`| Campo de entrada de texto (`<input>`)
+| `display: block; width: 100%; padding: 8px 12px; border: 1px solid black; background: white; color: black;` | `block w-full px-3 py-2 border border-black bg-white text-black rounded-md` | `form-select border-black` | Selector desplegable (`<select>`)
+| `display: block; margin-bottom: 8px; font-weight: 500;` | `block mb-2 font-medium` | `form-label` | Etiqueta de campo (`<label>`)
+| `accent-color: black; width: 16px; height: 16px;`| `accent-black w-4 h-4 rounded` | `form-check-input`| Casilla de verificación (`checkbox`)
+| `display: flex; align-items: stretch; width: 100%;`| `flex items-stretch w-full` | `input-group` | Agrupar input con botón o prefijo
 
 ## 16. Listas y Navegación
-| CSS                                                                                                            | Tailwind                                                       | Bootstrap                    | Descripción                                       |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ---------------------------- | ------------------------------------------------- |
-| `list-style: none; padding-left: 0;`                                                                           | `list-none pl-0`                                               | `list-unstyled`              | Quitar viñetas y margen a una lista.              |
-| `display: flex; flex-direction: column; border: 1px solid black;`                                              | `flex flex-col border border-black divide-y divide-black`      | `list-group`                 | Grupo de lista en caja.                           |
-| `display: flex; list-style: none; padding: 0;`                                                                 | `flex list-none p-0`                                           | `nav`                        | Contenedor base de enlaces de navegación.         |
-| `display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; background: black; color: white;` | `flex justify-between items-center px-4 py-3 bg-black text-white` | `navbar bg-black navbar-dark`| Barra de navegación superior (Navbar oscura).     |
-| `display: flex; gap: 8px; list-style: none;`                                                                   | `flex gap-2 list-none`                                         | `breadcrumb`                 | Ruta de navegación (migas de pan).                |
+| CSS                 | Tailwind        | Bootstrap        | Descripción          
+| ------------------- | --------------- | ---------------  | ------------------
+| `list-style: none; padding-left: 0;` | `list-none pl-0`| `list-unstyled` | Quitar viñetas y margen a una lista
+| `display: flex; flex-direction: column; border: 1px solid black;`| `flex flex-col border border-black divide-y divide-black`| `list-group`| Grupo de lista en caja
+| `display: flex; list-style: none; padding: 0;` | `flex list-none p-0` | `nav` | Contenedor base de enlaces de navegación
+| `display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; background: black; color: white;` | `flex justify-between items-center px-4 py-3 bg-black text-white` | `navbar bg-black navbar-dark`| Barra de navegación superior (Navbar oscura)
+| `display: flex; gap: 8px; list-style: none;` | `flex gap-2 list-none` | `breadcrumb` | Ruta de navegación (migas de pan)
 
 ## 17. Estados Interactivos: Hover, Focus y Active
-| CSS                                         | Tailwind                                             | Bootstrap                         | Descripción                                      |
-| ------------------------------------------- | ---------------------------------------------------- | --------------------------------- | ------------------------------------------------ |
-| `.el:hover { background-color: black; }`    | `hover:bg-black`                                     | *No existe como clase utilitaria* | Cambio de fondo al pasar el cursor (`:hover`).   |
-| `.el:focus { outline: 2px solid black; }`   | `focus:outline-none focus:ring-2 focus:ring-black`   | *Automático en `.form-control`*   | Resaltado al seleccionar elemento (`:focus`).    |
-| `.el:active { transform: scale(0.95); }`    | `active:scale-95`                                    | *No existe como clase utilitaria* | Efecto al mantener presionado (`:active`).       |
-| `.grupo:hover .hijo { color: white; }`      | `group` *(padre)* / `group-hover:text-white` *(hijo)*| *No existe en Bootstrap*          | Cambiar hijo al hacer hover en el padre.         |
-| `transition: all 0.2s ease;`                | `transition duration-200`                            | *No existe como clase utilitaria* | Transición suave entre estados.                  |
+| CSS           | Tailwind            | Bootstrap      | Descripción           
+| --------------| ------------------- | -------------- | --------------------
+| `.el:hover { background-color: black; }`| `hover:bg-black`| *No existe como clase utilitaria* | Cambio de fondo al pasar el cursor (`:hover`)
+| `.el:focus { outline: 2px solid black; }`| `focus:outline-none focus:ring-2 focus:ring-black`| *Automático en `.form-control`*   | Resaltado al seleccionar elemento (`:focus`)
+| `.el:active { transform: scale(0.95); }`| `active:scale-95`| *No existe como clase utilitaria* | Efecto al mantener presionado (`:active`)
+| `.grupo:hover .hijo { color: white; }`| `group` *(padre)* / `group-hover:text-white` *(hijo)*| *No existe en Bootstrap*| Cambiar hijo al hacer hover en el padre
+| `transition: all 0.2s ease;`| `transition duration-200`|*No existe como clase utilitaria* | Transición suave entre estados
 
 ## 18. Componentes Prediseñados
 | CSS (Concepto)   | Tailwind                  | Bootstrap       | Descripción  
